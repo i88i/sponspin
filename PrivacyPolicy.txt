@@ -1,0 +1,12 @@
+Privacy Policy for Senf
+
+Senf is a browser extension that checks a database for links to a forum where other people have submitted notes relevant to the URL (and title) transmitted, using my other extension SponSpin. Both URL and title are public. No other information is transmitted. NO INFORMATION IS RECORDED.
+The transmission of the URL/Title goes over HTTPS to a secured PHP script and is encrypted. No other data is available to that script, no IP address is collected or recorded.
+All this extension does is check for a matching link and return a forwarding link to the matching comment on a public forum at sponspin.org that has been submitted by random people.
+
+The complementing extension SponSpin adds a post or topic to a public forum. The data transmitted are: the URL and title of the page from and about the post is sent, the API key to the public forum at spin.sponspin.org, the User's username and user number the User received when signing up to that forum and finally, the comment in a text box the user submits.
+The transmission of these form data goes over HTTPS to a secured PHP script and is encrypted. No other data is available to that script, no IP address is collected or recorded. Besides recording the user submitted data the URL and title get recorded in a separate database that keeps them in RAM for speedy access by Senf.
+
+If you have additional questions or require more information, contact me through email at axel@i88i.com
+
+By using this browser extension, you hereby consent to this Privacy Policy and agree to its Terms and Conditions.
