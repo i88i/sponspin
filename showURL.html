@@ -1,0 +1,192 @@
+<html>
+
+
+ <head>
+ <meta charset="utf-8"/>
+
+
+
+
+
+<style>
+
+body {background-color: #e6ffff;   }
+
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 750px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+
+#form-normal {
+display: none;
+}
+
+#noMatch
+{display: inline;}
+
+form div + div {
+  margin-top: 1em;
+}
+
+
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.7); /* IE */
+  -moz-transform: scale(1.7); /* FF */
+  -webkit-transform: scale(1.7); /* Safari and Chrome */
+  -o-transform: scale(1.7); /* Opera */
+  padding: 10px;
+}
+
+
+input, textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1.1em sans-serif;
+ /* To harmonize the look & feel of text field border */
+  border: 2px solid #999;
+ /* To give the same size to all text fields */
+/*  width: 600px;*/
+/*  box-sizing: border-box;*/
+}
+
+input:focus {
+  /* To give a little highlight on active elements */
+
+    border:3px solid red;
+
+}
+textarea:focus {
+  /* To give a little highlight on active elements */
+
+    border:2px solid black;
+
+}
+
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 4em;
+}
+
+img {
+    max-width: 8%;
+    height: auto;
+}
+
+#credentials {
+display:none;
+}
+
+.hide-password
+    {display: none;}
+
+    #chars {
+        font-size: 12px;
+    }
+
+
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+#submit {
+      padding-left: 105px;
+    background-color: #eacc0a;
+    color: white;
+    font-size: 20px;
+        }
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: .5em;
+    border-radius: 8px;
+}
+
+#outer
+{ width: 100%; text-align: center; }
+
+.inner
+{display: inline;}
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.99em;
+    padding-right: 0.99em;
+    border: 2px groove (internal value);
+    border-color: darkred;
+    border-style: dotted;
+}
+
+
+	</style>
+
+    </head>
+
+   <body>
+
+
+<p id="noMatch"><h2>Du musst auf einer Spiegel/SPON Seite sein. Dann funktioniert's!</h2></p>
+
+	<form id="form-normal">
+
+    <fieldset class="phoenixa" id="wurstTitle">
+        <legend></legend>
+
+ <div id="credentials">
+ <p>Bitte besorge dir erst den Benutzernamen auf <a href="http://spin.sponspin.org" target= "_blank" />SponSpin.org.</a></p> Ohne den geht hier nix!</p>
+ <p><label for="username">Benutzer-/Spitzname:   </label><input type="text" size="20" class="phoenixa" placeholder="Dein Benutzername hier" id="username" name="username"><u style="color:red" id="p2"><br></u> und =>
+ <label for="usernumber">BenutzerNummer:   </label><input type="text" size="7" class="phoenixa" id="usernumber" name="usernumber">*<br></p>
+ <p><label>Schluessel zum Forum hier eintragen:   </label><input id="keyfield" name="keyfield" type="password" class="phoenixa" placeholder="Da hier kein Schluessel ist wird ein neuer generiert und per eMail geschickt" size="60">*<br>
+     <span class="password-showhide" ><span class="show-password"><u style="color:blue">Schluessel zeigen</u></span><span class="hide-password"><u style="color:green">Schluessel verstecken</u></span></span>
+</p>
+
+
+ <hr>
+
+ </div>
+
+ <div id="senfquery">
+ <input type="text" size="55" class="phoenixa" id="wuschTitle" name="user_wurst_title" readonly hidden><br>
+ <input type="text" class="phoenixa" id="wurstURL" name="user_wurst_URL" hidden><br>
+
+
+ <button type="button" id="commentErase">Kommentar loeschen:</button>
+     <textarea id="comment" cols="60" rows="40" class="phoenixa" placeholder="(Schreib' hier was du zu obigem Thema sagen willst! Du must auf der Seite sein die du kommentieren willst!)" autofocus maxlength="2000"></textarea><span style="color:darkcyan" id="chars"> Zeichen uebrig</span>
+
+         </div>
+        </fieldset>
+
+    <div id="outer">
+        <div class="inner" id="credsbutton"><button type="button" style="width:115px; height: 33px;">Zugangsdaten<br />Zeigen/Verstecken</button></div>
+        <div class="inner" id="submit"><button type="submit"><h3>Abschicken (Spritz/Klecker)</h3></button></div>
+    </div>
+    </form>
+
+
+
+<script src="jquery.js"></script>
+<script src="jquery.phoenix.min.js" type="text/javascript"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.css">
+<script src="showURL.js" type="text/javascript"></script>
+
+
+    </body>
+
+</html>
